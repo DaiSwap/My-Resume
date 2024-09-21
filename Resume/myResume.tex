@@ -1,0 +1,317 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Pranav Venkatesh} % Your Name
+\newcommand{\course}{Btech} % Your Program
+\newcommand{\roll}{21ETMC412025} % Your Roll No.
+\newcommand{\phone}{8880093410} % Your Phone Number
+\newcommand{\emaila}{19644pranavvenkatesh@email.com} %Email 1
+\newcommand{\emailb}{21etmc412025@msruas.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+% Removed the logo here by deleting the following line
+%\includegraphics[width=2cm,clip]{NITW_LOGO.png}
+
+\parbox{\dimexpr\linewidth\relax}{
+\begin{minipage}[t]{0.5\linewidth}
+  \textbf{\Large \name} \\
+  {Roll No: \roll} \\
+  \course \\
+  {Mathematics and computing} \\
+  {MS Ramaiah University of Applied Sciences}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\linewidth} % Right side with ragged left alignment
+  \raggedleft
+  {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone} \\
+  \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}} \\
+  \href{https://github.com/DaiSwap/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  \href{https://www.linkedin.com/in/pranav-venkatesh-bbbb97225/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{minipage}
+}
+
+
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {M S Ramaiah University of Applied Sciences}{CGPA: 8.84}
+      {Mathematics and Computing}{2021-2025}
+    \resumeSubheading
+      {Amratha Bharati PU college}{Percentage: 96}
+      {PCMC Pre University}{2019-2021}
+    
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tenerci}{Bengaluru}
+      {Cloud Support Engineer}{March 2023 - Aug 2023}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item {Analyzed and rectified 20+ software bugs within Excel, enhancing stability and functionality; outcomes resulted in a noticeable reduction in data processing errors and improved task completion time for 5+ team members.}
+        \item { Integrated AWS SES for SMTP, successfully managing 100+ automated emails daily, increased communication efficiency by 40\% and gained hands-on experience with cloud-based services.}
+      \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {Sugamya Hospitality}{Remote}
+      {Research Intern}{Dec 2023 - Feb 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item {Development of an image processing system (GOS-WADO), focusing on enhancing AI-driven image recognition and validation techniques.}
+        \item {Implemented a comprehensive evaluation framework for image processing methods, validated through 500+ test cases, resulting in a 20\% reduction in error rates and significantly improving system reliability.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Development of Autonomous Drone Navigation\href{https://github.com/DaiSwap/DC-T}{\texttt{|Link}}} %Project Name
+      {Designed a system enabling object detection using pinhole camera model.} %Project Name, Location Name
+      
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: YOLOv5, Python, OpenCV, TensorFlow.}
+        \item {Implemented a mathematical model using the pinhole camera technique to calculate real-world coordinates from YOLOv5 inputs, achieving LiDAR-like precision in location determination; enhanced navigation and detection accuracy by 25\%.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Wado 1.0: Image Processing Subsystem\href{https://github.com/DaiSwap/vision-basics}{\texttt{|Link}}} %Project Name
+      {IPS to streamline check-in processes in the hospitality industry through quick ID verification.} %Project Name, Location Name
+      
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python, OpenCV, pytesseract.}
+        \item {Created a remote Government ID Submission and Photo Verification System. It resulted in a reduction of 50\% in check-in time, with automated identity verification improving operational efficiency and user experience.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {SARIMA-based Black Pepper Price Prediction\href{https://github.com/DaiSwap/Sarima_price_prediction}{\texttt{|Link}}} %Project Name
+      {Designed an AI algorithm to predict future prices of black pepper, empowering farmers with actionable insights.} %Project Name, Location Name
+      
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python, SARIMA, Seasonal Analysis, Time-Series Forecasting.}
+        
+        \item { Optimized and deployed the SARIMA model, achieving a 15\% increase in forecast accuracy; enhanced predictive analytics.}
+        
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Certifications}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     
+     \textbf{Data Structures and Algorithms, OOPs, Linux}\\
+     \textbf{Languages}{: Python, SQL} \\
+     \textbf{Developer Tools}{: Git, Power BI, Excel, Docker | } 
+     \textbf{Cloud/Databases}{: AWS, MySQL} \\
+     \textbf{Frameworks/Libraries}{: TensorFlow, PyTorch, Keras, OpenCV, Matplotlib, pytesseract, Pandas, NumPy} \\
+     
+     \textbf{Mathematical Skills}{: Linear Algebra, Inferential Statistics, Quantum Computing, Complex analysis, Discrete math} \\
+     \textbf{AI/ML Algorithms}{: Regression, Clustering, Neural Networks, Decision trees, SARIMA} \\
+     \textbf{Soft skills}{: Problem solving, communication, team collaboration, self motivation, time management} \\
+     \textbf{Languages}{: English, Hindi, Kannada, Japanese-A1}\\
+     \textbf{Interests}{: Writing blogs\href{https://daiswap.hashnode.dev/}{\texttt{|Link}}, swimming, cooking, reading books\href{https://www.goodreads.com/daiswap/}{\texttt{|Link}}, photography\href{https://in.pinterest.com/DaiSwap/}{\texttt{|Link}}}
+    }}\\
+    \textbf{Certifications}{: Inferential Statistics\href{https://coursera.org/share/8cb7c5ff6650d53cf75141d709efcab6}{\texttt{|Link}}, IBM data science \href{https://coursera.org/share/7af997b5be635774bca12c5e9710d8c8}{\texttt{|Link}}, Programming foundations\href{https://coursera.org/share/a82fa7dd92d49103e5f6f50123ca958f}{\texttt{|Link}}, Communication Skills\href{https://coursera.org/share/45b82ff3692d22434ddfc98b67a6f88a}{\texttt{|Link}}, Foundational Data,ML\&AI tasks in GCP\href{https://www.cloudskillsboost.google/public_profiles/59a55ac8-d9c6-439c-b422-6981f048ff1d}{\texttt{|Link}}}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Lead Ai developer } % Position
+    {Aeronyx} %Club,Event
+    {2023-present} %Tenure Period
+\resumePOR{Core member } % Position
+    {NSS} %Club,Event
+    {2021-present} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Aerothon 2024} % Award
+    { Development of autonomous drone navigation, progressed to the penultimate round(Top 25). \\Contributed to a 60\% improvement in obstacle detection accuracy. } % Event
+    {} %Event Year
+    
+%\resumePOR{ISRO space hackathon } % Award
+%    {Visualized precipitation systems using C-Band Doppler radar observations.} % Event
+ %   {} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
